@@ -5612,7 +5612,7 @@ anchor OuterWellspring.AboveWestDoor at -866, -3949:  # on the platform arcing o
     unsafe:
       Grapple, DoubleJump OR Dash OR Sword
       Grapple, Damage=15, Spear=1 OR Shuriken=1 OR Flash=1 OR Sentry=1
-      DoubleJump, TripleJump OR Dash
+      DoubleJump, TripleJump OR Dash OR Sword OR Glide
       Bash, Grenade=1, DoubleJump OR Dash  # wall jump on the small wall at the edge of where the pickup is
       Launch
 
