@@ -331,6 +331,7 @@ anchor MarshSpawn.Cave at -707, -4419:  # At Tokk in the Cave
     moki: BreakWall=10
   pickup MarshSpawn.FightRoomEX:
     moki: BreakWall=10
+    unsafe: free  # Bait the fight room lizard
 
   conn Tokk: free  # this one is tokk anywhere'd
   conn MarshSpawn.CaveEntrance:
