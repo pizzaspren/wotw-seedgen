@@ -1709,6 +1709,9 @@ anchor MarshPastOpher.BowPath at -494, -4294:  # checkpoint climbing up to Bow t
       Glide  # make the suspended platform swing
       Shuriken=2 OR GrenadeJump
       Blaze=2, Spear=1 OR Flash=1  # using shuriken is more energy than Shuriken=2 / using sentry is the same energy requirement as Sentry=3
+      # Bash, Water  # Use the bees
+      Bash  # Normal+ difficulty. Juggle the slug to the top of the suspended platform. Use the fronkey and the pole.
+      # Bash, MarshSpawn.ToOpherBarrier  # Easy+ difficulty. Bring the slug from MarshSpawn.Main as replacement. Path to/from there can be done bash-only
   conn MarshPastOpher.MillView:
     moki:
       DoubleJump OR Dash OR Glide OR Launch
