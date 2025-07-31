@@ -11851,6 +11851,7 @@ anchor EastPools.TPArea at -1297, -4143:  # Where Tokk stands
     unsafe:
       Sword, Bash  # Hit slug with sword to make it fall off the ceiling and then bash it
       DoubleJump, Bash  # Bash the slug to the ground right of the spikes and then bash it twice for height
+      Dash, Bash  # Use right wall below the spikes to get to the slug, bash it to the ground right of the spikes, and use it to get up
 
   # this Tokk disappears after Kwolok's death
   conn EastPools.Teleporter:
