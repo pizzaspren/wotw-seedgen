@@ -6664,7 +6664,9 @@ anchor InnerWellspring.Teleporter at -1308, -3674:  # At the teleporter
     kii:
       Dash, Hammer
       DoubleJump, Spear=1 OR Shuriken=1 OR Blaze=1 OR Flash=1 OR Sentry=1  # double jump can solve it by itself but the branch you are jumping from can be a bit janky
-    unsafe: Dash OR DoubleJump OR FlashSwap
+    unsafe:
+      Dash OR DoubleJump OR FlashSwap
+      Bash, Water
 
   pickup InnerWellspring.LibraryEX: free
   pickup InnerWellspring.AboveTpEX:
