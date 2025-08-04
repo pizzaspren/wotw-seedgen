@@ -4086,6 +4086,7 @@ anchor GladesTown.West at -430, -4135:  # Path exiting the village, above Twille
       Damage=10, Bash OR Sword
       DoubleJump, Dash, Damage=10  # damage for avoiding slimes
       DoubleJump, TripleJump OR Sword OR Hammer
+      Bash  # Bash sequence with the right slug and the lantern
   conn GladesTown.TwillenHome: free
   conn GladesTown.Teleporter:
     moki:
