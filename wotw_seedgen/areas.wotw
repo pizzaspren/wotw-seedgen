@@ -835,6 +835,7 @@ anchor MarshSpawn.RegenDoor at -573, -4393:  # left of regen tree
       Spear=1
       PauseFloat  # Pausefloat from the left platform
       GrenadeJump OR GlideJump OR BlazeSwap=1 OR FlashSwap
+      MarshSpawn.KeystoneDoor, HowlsDen.RainLifted, Bash  # Bring the slug or mantis from CaveEntrance
 
 anchor MarshSpawn.HowlApproach at -500, -4395:  # right of regen tree
   refill Checkpoint
@@ -855,7 +856,7 @@ anchor MarshSpawn.HowlApproach at -500, -4395:  # right of regen tree
       Sword OR Hammer OR Spear=1 OR Flash=1 OR Sentry=1  # upslash to slash left to walljump up
       # Glitched
       # GlideJump OR GrenadeJump=1
-    unsafe: Dash OR PauseFloat OR BlazeSwap=1 OR GlideJump OR GrenadeJump
+    unsafe: Dash OR PauseFloat OR BlazeSwap=1 OR GlideJump OR GrenadeJump OR Bash
   conn MarshSpawn.MokkTheBrave:
     moki: MarshSpawn.HowlBurnt
 
