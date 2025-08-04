@@ -2523,6 +2523,9 @@ anchor WestHollow.MokiByTwillen at -230, -4229:  # The moki to the upper left of
   conn WestHollow.InFrontPurpleDoorEnemyPaths:
     moki: Combat=BombSlug OR DoubleJump OR Dash OR Glide OR Launch
     gorlek: free  # bait the bombslug
+  conn WestHollow.RockPuzzle:
+    unsafe:
+      WestHollow.UpperDrainLeverPulled, Bash  # Need the slug beneath the Moki - https://youtu.be/TNJO8YCZog4
 
 anchor WestHollow.InFrontPurpleDoor at -181, -4240:  # In front of the purple door, before the TP
 # Paths using the slime originate from WestHollow.InFrontPurpleDoorEnemyPaths because it doesn't appear if you spawned at this anchor
