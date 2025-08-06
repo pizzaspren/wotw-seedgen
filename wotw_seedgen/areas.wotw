@@ -14173,6 +14173,8 @@ anchor UpperWastes.MissilePuzzleLeft at 1937, -3794:  # Immediately to the right
       Burrow, DoubleJump, Sword  # pogo the torpedo
       SentryJump=1
       Bash, DoubleJump, TripleJump  # Lure the miner on higher ground to the left
+      Bash, GlideJump, Damage=10  # Bash-Glidejump directly from beneath the miner. Needs contact damage.
+      Burrow, GlideJump  # Burrow-Glidejump
   pickup UpperWastes.MissileSpawnEX:
     moki: Burrow
   pickup UpperWastes.KSDoorEX:
