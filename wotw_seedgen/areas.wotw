@@ -8928,7 +8928,9 @@ anchor LowerReach.SwimmingPool at -44, -4001:  # At the platform in the freezabl
       DoubleJump  # Precise wall jump on the left wall then wjump on the right wall
       LowerReach.ThawEastFurnace, Bash, WaterDash, Water OR Damage=40
       LowerReach.ThawEastFurnace, Bash, Water  # Bash the fish
-    unsafe: LowerReach.ThawEastFurnace, Bash, Damage=100  # Bash the fish
+    unsafe:
+      LowerReach.ThawEastFurnace, Bash, Damage=100  # Bash the fish
+      LowerReach.ThawEastFurnace, Water, WaterDash, GlideJump  # Waterdash-Glidejump
   conn LowerReach.HalfwayIceCavern:
     kii:
       Bash, Grenade=1, DoubleJump, TripleJump
