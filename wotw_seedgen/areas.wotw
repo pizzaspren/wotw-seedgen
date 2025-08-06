@@ -8114,6 +8114,7 @@ anchor LowerReach.Icefall at -448, -3999:  # Where you drop the rock on Baur's n
       DoubleJump, TripleJump, Combat=Nest, GlideJump OR Water OR Damage=20
       Combat=Nest, SwordSJump=1, DoubleJump, TripleJump  # running sjump +tjump+upslash
       Combat=Nest, HammerSJump=1, DoubleJump, TripleJump, Dash
+      Water, WaterDash, GlideJump  # Waterdash-Glidejump to the ledge next to the nest
   pickup LowerReach.IcefallEX:
     moki, LowerReach.LeftFurnace:
       DoubleJump, Bash  # bash the enemies
