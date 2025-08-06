@@ -13437,6 +13437,7 @@ anchor LowerWastes.WestTP at 1456, -3997:  # At the Western Wastes TP
       Burrow, Sword OR Sentry=3 OR Shuriken=1
       Grapple, Glide, Spear=2 OR Blaze=2
       Grapple, Shuriken=3 OR Sentry=4
+      Burrow, GlideJump  # Burrow-Glidejump to get up the ledge, GlideJump over the spikes
   conn WoodsMain.FeedingGrounds:
     moki: WindtornRuins.Seir, Burrow  # Seir to make it a safe path
     gorlek: Burrow
