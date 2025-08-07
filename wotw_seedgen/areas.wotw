@@ -13238,6 +13238,7 @@ anchor UpperPools.LeftBubbleSpamRoom at -1634, -4052:  # At the checkpoint on to
       Damage=40, WaterDash, DoubleJump, Sword OR Hammer OR Spear=1
       SwordSJump=1, Water OR Damage=60
       Damage=40, SwordSJump=1, WaterDash
+      Water, WaterDash, GlideJump  # Waterdash-Glidejump to open the anemone
 
 # checkpoint at -1386, -4062
 
