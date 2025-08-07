@@ -595,6 +595,7 @@ anchor MarshSpawn.BeforeBurrows at -1006, -4497:  # On the island before the Bur
       WaterDash, Hammer, Water OR Damage=10
       GrenadeJump, DoubleJump OR Dash OR Glide OR Sword OR Hammer OR Shuriken=1 OR Flash=1 OR Sentry=1  # beside djump, everything use the friendly spikes
       GrenadeJump, Damage=10, Spear=1 OR Blaze=2
+      Water, WaterDash, GlideJump  # Waterdash-Glidejump over the spikes
   conn MarshSpawn.PoolsBurrowsSignpost:
     moki:
       Bash, DoubleJump, Dash
