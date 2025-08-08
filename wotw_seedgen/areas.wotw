@@ -280,6 +280,7 @@ anchor MarshSpawn.CaveEntrance at -588, -4393:  # before the door blocking regen
       Grapple, Bash OR DoubleJump OR Dash  # Swing the plant with Grapple
       GlideJump, GrenadeJump, Dash
       GrenadeJump, Bash
+      WallHammerJump  # First one on the ledge next to the slug, then off the wall beneath the lever
 
   conn MarshSpawn.RegenDoor:
     moki: MarshSpawn.KeystoneDoor
