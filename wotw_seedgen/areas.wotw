@@ -3753,6 +3753,7 @@ anchor EastHollow.AboveDepths at 47, -4302:  # To the right of the lever door bl
     kii: DoubleJump, TripleJump, Hammer, Spear=1 OR Flash=1 OR Sentry=1
     unsafe:
       DoubleJump, TripleJump, Hammer  # Hammer upswing to gain mor hight
+      WallHammerJump, Damage=10  # You will hate this. The last jump happens off a micro ledge beneath the spikes. Damage boost through spikes for 2nd to last platform
   pickup EastHollow.SplinterShard: free
   pickup EastHollow.DepthsExteriorEX:
     moki: Glide, Launch  # ...what even is intended here?
