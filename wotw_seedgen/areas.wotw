@@ -215,7 +215,7 @@ anchor MarshSpawn.BrokenBridge at -643, -4351:  # after dropping down the breaki
       AerialHammerJump OR GlideHammerJump OR WallHammerJump
       DoubleJump, TripleJump  # https://youtu.be/DIIHU4JiAj4
       HowlsDen.RainLifted, DoubleJump, Sword  # Pogo of the slime to jump to the ledge
-      GrenadeJump  # precise grenade wall jump off of a microwall on the left      
+      GrenadeJump  # precise grenade wall jump off of a microwall on the left
   pickup MarshSpawn.PreLupoEX: free
   pickup MarshSpawn.LupoMap:
     moki: SpiritLight=200
@@ -3139,6 +3139,8 @@ anchor WestHollow.DashArea at -88, -4423:  # To the right of the lever door
       Bash  # Bash the slug twice
       DoubleJump, TripleJump  # Jump from where the door was. Can wall jump from it if it's still closed
       WestHollow.DoorLever, DoubleJump, Sword  # Lure and pogo the mantis. Doesn't spawn if you spawned here but going under the slime is far enough to make it spawns.
+    unsafe:
+      WallHammerJump  # Very tight, off the ledge to the right
 
 anchor WestHollow.DashCrushers at -23, -4443:  # To the right of the crushers at dash tree
   refill Checkpoint
