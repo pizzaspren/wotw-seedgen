@@ -6405,6 +6405,7 @@ anchor InnerWellspring.WestDoor at -1205, -3894:  # Inside the door where you ex
     unsafe:
       Hammer, DoubleJump, TripleJump
       SentryJump=1
+      Bash, Sword  # Similar to Howl's Den doorskip. Wait on the wall beneath the lever - https://youtu.be/t0AuYg-kVmo
 
   pickup InnerWellspring.ShortcutWheelEX:
     moki: InnerWellspring.ShortCutWheel
