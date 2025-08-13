@@ -3883,6 +3883,7 @@ anchor EastHollow.Kwolok at 177, -4215:  # Between Ku and Kwolok
       Water, WaterDash, Dash, Damage=10  # coyote jump from the ledge under the grappable plant
       Water, WaterDash, Sword  # Pogo the projectile
       Water, SwordSJump=1  # probably doable with hammer as well, but it's much harder
+      Water, DashBashChain
       # Dirty Swims, probably incomplete. Stand in shallow water on the side of the first air pocket to regen.
       Damage=210, Launch
       Damage=210, Grapple, DoubleJump OR Dash OR Sword OR Sentry=3
