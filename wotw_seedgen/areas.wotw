@@ -3927,6 +3927,8 @@ anchor EastHollow.AboveDepths at 47, -4302:  # To the right of the lever door bl
     unsafe:
       Glide, DoubleJump, TripleJump
       Bash, Grenade=1  # Bait the mantis
+      GlideBashChain OR DoubleJumpBashChain  # Mantis. Glide bash chain is a lot easier with EastHollow.DepthsOpen
+      DashBashChain  # SneezeSlug projectile
 
   conn UpperDepths.Entry:
     moki: EastHollow.DepthsOpen
