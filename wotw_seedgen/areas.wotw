@@ -132,6 +132,7 @@ anchor MarshSpawn.Main at -799, -4310:  # spawn location / inkwater well
       Launch  # Launching along the ceiling, starting above the LongSwimEX
       Grapple, Spear=1 OR Blaze=2
       HowlsDen.RainLifted, DoubleJumpBashChain OR GlideBashChain   # Chain bash the mantis
+      Unpopular, HowlsDen.RainLifted, DashBashChain  # Chain bash the slime
       # Glitched:
       SentryJump=1, DoubleJump  # walljump on the small wall above the grappable plant. With sword, djump+upslash
       SwordSJump=2  # 1 grounded near full height, 1 aerial mid height, jump off left wall, swordfloat to pickup
