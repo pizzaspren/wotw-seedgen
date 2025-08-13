@@ -5513,7 +5513,9 @@ anchor OuterWellspring.AboveEntranceDoor at -837, -4026:  # at the crystal above
   pickup OuterWellspring.EntranceRoofEX:
     moki: DoubleJump, Launch, Dash OR Glide
     gorlek: Launch, DoubleJump OR Dash OR Glide OR Sword OR Hammer
-    unsafe: Launch
+    unsafe:
+      Launch
+      DashBashChain  # Wasp projectile - https://youtu.be/EM9y0XRhFUc
   pickup OuterWellspring.RightWallEC:  # Be carefull it's not redundant with AboveEntranceDoor->EastDoor->RightWallEC
     gorlek: BreakWall=20, DoubleJump, TripleJump, Damage=15  # go above the wheel to the right, damage not mandatory
     kii: BreakWall=20, DoubleJump, TripleJump
