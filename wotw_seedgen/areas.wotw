@@ -6850,6 +6850,7 @@ anchor InnerWellspring.Teleporter at -1308, -3674:  # At the teleporter
       Dash, Hammer  # path from the right, tight combos to reach the platform
       Shuriken=2, DoubleJump OR Dash OR Glide
       FlashSwap
+      DashBashChain, Water  # Kelp projectile
   pickup InnerWellspring.SwimOre:
     moki: Water
     unsafe:  # Enemies aren't here if you don't have Clean Water
