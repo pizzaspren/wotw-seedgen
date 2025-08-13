@@ -1767,6 +1767,8 @@ anchor MarshPastOpher.BowApproach at -490, -4245:  # On the right ledge above th
         Bash, DoubleJump OR Dash OR Sword OR Hammer  # https://youtu.be/LeoIWBsq-s0
       Bash, HammerExtension, Bow=1 OR Spear=1 OR Grenade=1  # Same as above but HammerExtension from the jumpad instead of using the first lantern
       Bash, Glide, Bow=1 OR Spear=1 OR Grenade=1 OR Shuriken=1  # https://youtu.be/LJmKEirEloM
+      Unpopular, DashBashChain  # Normal+ difficulty. Chain bash the slug next to the jumppad. Redundant path with starting from MillView and BowApproach since the slug is between all three
+      # Unpopular, DashBashChain, MarshSpawn.ToOpherBarrier  # Easy+ difficulty. Use the slug from MarshSpawn.Main as replacement.
   conn MarshPastOpher.OpherSkipBranch:  # Make sure it's not redundant with MarshPastOpher.MillView->MarshPastOpher.OpherSkipBranch nor MarshPastOpher.BowApproach->MarshPastOpher.PoolsPathEast
     unsafe:
       PauseFloat  # I hope it'll make you regret playing with that trick in logic
