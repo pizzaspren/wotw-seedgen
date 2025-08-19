@@ -12365,6 +12365,7 @@ anchor UpperPools.KeystoneRoomEntrance at -1535, -4115:  # At the bottom entranc
       Damage=40, WaterDash
       Damage=100, Launch
       Damage=140, Bash
+      Water, GroundedHammerJump  # WaterHammerJump
 
   conn EastPools.CentralRoom:
     moki:
