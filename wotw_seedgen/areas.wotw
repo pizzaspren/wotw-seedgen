@@ -3058,6 +3058,7 @@ anchor WestHollow.PolesPound at -123, -4377:  # Checkpoint at the right of the p
       Damage=10, SwordSJump=1
       Hammer  # upswing to get onto the right side of the spikes (you can touch them)
       Dash  # max jump without hitting the spike hitbox, dash to the small ledge
+      Damage=10, Bash  # dboost on spikes to bash through the slug without knockback
 
   conn WestHollow.DashApproach:
     moki: DoubleJump OR Bash OR Launch OR Glide OR Dash
