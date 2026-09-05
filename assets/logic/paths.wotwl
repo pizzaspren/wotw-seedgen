@@ -11272,15 +11272,22 @@ anchor UpperDepths.SecondKSRoom at 542, -4466:  # The egg of the firefly circlin
     gorlek: DepthsLight OR BreakWall=1 OR Dash OR Bash OR Glide OR Launch OR Sword OR Hammer OR Damage=10  # with DoubleJump it's still quite easy to take damage
     kii: free  # might just wanna stick to damage 10 but I think it's doable
   conn UpperDepths.MoraPath:
-    moki:
-      DepthsLight, DoubleJump, Grapple, Dash OR Glide
-      DepthsLight, Launch
+    # manual DepthsLight because the path is so long
+    moki, UpperDepths.ForestsEyes OR Flash=4:
+      DoubleJump, Grapple, Dash OR Glide
+      Launch
     gorlek:
+      DepthsLight, Launch
+      # Bow has very limited sight
+      DoubleJump, UpperDepths.ForestsEyes OR Flash=4
+      UpperDepths.ForestsEyes OR Flash=2:
+        Bash, Grenade=1, Damage=30, Dash OR Sword
+        Bash, Grenade=2
+    kii:
       DepthsLight, DoubleJump
       DepthsLight, Dash, Damage=30
-      DepthsLight, Bash, Grenade=1, Damage=30, Glide OR Sword
+      DepthsLight, Bash, Grenade=1, Damage=30, Dash OR Glide OR Sword
       DepthsLight, Bash, Grenade=2
-    kii:
       DepthsLight, Damage=60, Sentry=4 OR Sword OR Shuriken=4 OR Hammer
     unsafe:
       DepthsLight, Damage=60, Sentry=3 OR Shuriken=3
