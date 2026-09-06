@@ -5212,7 +5212,7 @@ anchor WestGlades.LeftLowerPool at -642, -4112:  # The left edge of the lower po
       DoubleJump, Damage=30, Dash OR Sword OR Hammer OR Shuriken=2 OR Flash=2 OR Sentry=2
       Grapple, Shuriken=1 OR Flash=1 OR Sentry=1
       GlideJump, DoubleJump, TripleJump
-      AerialHammerJump, TripleJump OR Dash OR GlideJump  # no dboost path because depending on where you land in the spikes a standard hjump won't reach the wall
+      AerialHammerJump  # reset jump on the wall left of the grapple plant, slide off then hjump before touching the spikes
       # GrenadeJump=1, Damage=10, DoubleJump OR Dash OR Grapple  # gjump from the spikes. Could work with other skills in the condition but they are much harder tp catch the wall with if you fall into a pit
     unsafe:
       Bash, DoubleJump
@@ -5227,12 +5227,13 @@ anchor WestGlades.LeftLowerPool at -642, -4112:  # The left edge of the lower po
       SwordSJump=2  # precise sword float to the safe ledge on the very left
       SentryJump=1, Damage=10
       GlideJump, DoubleJump
-      AerialHammerJump OR GlideHammerJump OR AbilitySwap=3
+      GlideHammerJump OR AbilitySwap=3
   pickup WestGlades.SwimEF:
     moki: Water
     kii:
       Damage=140
       WaterDash, Damage=60
+    unsafe: Damage=120
   pickup WestGlades.LowerPoolSL:  # Only dirty swims. Clean Water is solving through the PastTown connection
     kii:
       Damage=80
@@ -5260,8 +5261,8 @@ anchor WestGlades.LeftLowerPool at -642, -4112:  # The left edge of the lower po
       Grapple, DoubleJump, TripleJump, Dash OR Sword
       Grapple, DoubleJump, TripleJump, Glide, Hammer OR Shuriken=1 OR Flash=1 OR Sentry=1
       SentryJump=1
-      AerialHammerJump, TripleJump OR GlideJump
-      AerialHammerJump, Grapple, Dash OR Glide OR Sword
+      AerialHammerJump, TripleJump OR Dash OR GlideJump  # Dash starts from the central platform
+      AerialHammerJump, Grapple, Glide OR Sword
       AerialHammerJump, WaterDash, Water OR Damage=20
       # GrenadeJump=1, DoubleJump, TripleJump, Dash OR Sword OR Hammer OR Spear=1 OR Shuriken=1 OR Flash=1 OR Sentry=1
     unsafe:
@@ -5314,7 +5315,6 @@ anchor WestGlades.Center at -612, -4083:  # At the middle room connecting upper 
     kii:
       Bash, Grenade=1
       Damage=50, Combat=Tentacle, Dash, Sword OR Hammer OR Shuriken=1 OR Flash=1 OR Sentry=1
-      AerialHammerJump, Dash OR Sword OR Spear=1 OR Flash=1 OR Sentry=1  # Start with an upslash. No shurken because throwing it at the wooden platform makes it swing
       # GrenadeJump=1, DoubleJump, TripleJump OR Hammer OR Spear=2 OR Flash=2 OR Sentry=2
       # GrenadeJump=1, DoubleJump, Shuriken=1, Spear=1 OR Flash=1 OR Sentry=1  # same above but more energy efficient (2 shurikens doesn't work because hitting the platform pushes it away)
       # GrenadeJump=1, DoubleJump, Spear=1, Blaze=1  # same above but more energy efficient
@@ -5345,15 +5345,14 @@ anchor WestGlades.Center at -612, -4083:  # At the middle room connecting upper 
         DoubleJump, Hammer, Glide OR Flash=1 OR Sentry=1 OR Shuriken=1
         Dash, Hammer, Glide OR Flash=1 OR Sentry=1 OR Shuriken=1
         Damage=30, Dash, Sword
-      SentryJump=1
-      AerialHammerJump, TripleJump OR GlideJump  # glide jump goes for the suspended platform to refresh djump
-      Combat=Tentacle, Damage=40, GlideJump, DoubleJump
+      SentryJump=1 OR AerialHammerJump  # hjump goes for the suspended platform to refresh djump
       # GrenadeJump=1, DoubleJump, Dash OR Sword
     unsafe:
-      AerialHammerJump OR GlideHammerJump OR WallHammerJump
+      GlideHammerJump OR WallHammerJump
       GrenadeJump, DoubleJump
       DoubleJump, TripleJump, Damage=10
       GlideJump, Damage=10
+
   conn WestGlades.LeftLowerPool:
     moki: Water OR Launch OR DoubleJump OR Dash OR Glide OR Bash
     gorlek: Sword OR Hammer
@@ -5470,13 +5469,12 @@ anchor WestGlades.MillApproach at -705, -4065:  # At the ledge of the room openi
       Bash, Grenade=1  # Bash the mortar so you can reach your grenade from higher
       Bash, DoubleJump OR Dash OR Glide OR Sword OR Hammer OR Spear=1 OR Shuriken=1 OR Flash=1 OR Sentry=1
       SentryJump=1
-      AerialHammerJump, TripleJump  # either upslash then hjump twice or wall jump on the left wall first
+      AerialHammerJump  # wall jump on the left wall first
     unsafe:
+      Bash OR AbilitySwap=3 OR GlideHammerJump
       Grapple, BlazeSwap=1 OR SentrySwap=1
-      Bash
       DoubleJump, TripleJump, Sword OR Hammer
       GrenadeJump, DoubleJump
-      BlazeSwap=3 OR SentrySwap=3 OR FlashSwap OR AerialHammerJump OR GlideHammerJump
   conn WestGlades.Upper:
     moki:  # realizing the semisolid not considered for moki
       Bash, DoubleJump OR Dash OR Glide OR Grenade=1
@@ -5562,7 +5560,7 @@ anchor WestGlades.ShrineArea at -664, -4026:
       Bash  # Use the enemies from the shrine
       DoubleJump, TripleJump
       Grapple, DoubleJump, Hammer OR Sword
-      AerialHammerJump  # upslash first
+      AerialHammerJump
       DoubleJump, GlideJump  # Climb the right wall and then glide across
       GlideJump, Dash, Sword OR Hammer OR Spear=1 OR Flash=1 OR Sentry=1
       # GrenadeJump=1, DoubleJump
