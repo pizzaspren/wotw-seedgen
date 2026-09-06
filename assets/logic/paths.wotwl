@@ -4302,7 +4302,7 @@ anchor GladesTown.TwillenHome at -414, -4160:  # At Twillen in Glades
       moki: GladesTown.BuildHuts, GladesTown.FatherMokiGone
   refill Checkpoint
 
-  state GladesTown.FamilyReunionMokiTalkedTo: free  # Start of the quest "Family Reunion"
+  state GladesTown.FamilyReunionMokiTalkedTo: free  # Start of the quest "Family Reunion". In vanilla, this also unlocks the Grom shop slot (42178|51230)
   state GladesTown.FatherMokiGone:
     moki: WoodsEntry.FamilyReunionDollQICollected
   state GladesTown.FamilyReunion:
@@ -7824,9 +7824,7 @@ anchor WoodsEntry.FamilyHut at 469, -4179: # infront of family reunion hut door
   #   unsafe: WoodsEntry.MokiFatherHutDoorOpen
 
   state WoodsEntry.MokiFatherHutDoorOpen:  # Whether the door is actually open
-    moki: WoodsEntry.CanOpenMokiFatherHut
-  state WoodsEntry.CanOpenMokiFatherHut:  # Rando-specific config to allow opening the door
-    moki: GladesTown.FamilyReunionKey  # Requirement defined by seed_core
+    moki: WoodsEntry.CanOpenMokiFatherHut  # Rando-specific uberstate that allows unlocking the door. Set by seed_core when receiving GladesTown.FamilyReunionKey
 
   conn WoodsEntry.BellowHut: free
   conn WoodsEntry.ShriekMeet:
@@ -7855,6 +7853,7 @@ anchor WoodsEntry.FamilyHutInside at 445, -4118: # inside of family reunion hut
     target: WoodsEntry.FamilyHut
     enter: free
 
+  # _petrifiedForestGroup.wispCutscenePlayed (58674|58268) is set when the Voice speaks inside the hut
   state WoodsEntry.FamilyReunionDollQICollected:  # Quest state progression
     moki: WoodsEntry.DollQI
 
