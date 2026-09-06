@@ -356,34 +356,75 @@ anchor MarshSpawn.Cave at -707, -4419:  # At Tokk in the Cave
   conn Tokk: free  # this one is tokk anywhere'd
   conn MarshSpawn.CaveEntrance:
     moki: MarshSpawn.TokkBarrier
-  conn MarshSpawn.PoolsBurrowsSignpost:
+  conn MarshSpawn.CaveWaterfall:
     moki:
-      DoubleJump, Dash OR Grapple
-      Bash, DoubleJump OR Dash
-      Bash, Grenade=1, Glide OR Grapple
+      MarshSpawn.CaveFight
       Launch
-      MarshSpawn.CaveFight, DoubleJump OR Dash
-      MarshSpawn.CaveFight, Bash, Grenade=1
+      DoubleJump, Bash OR Dash OR Grapple
+      Bash, Grenade=1
     gorlek:
       DoubleJump
-      Bash, Grenade=1
-      MarshSpawn.CaveFight, SentryJump=1  # makes other sentryjump paths unnecessary
-      # weapon floats maybe too precise for gorlek
+      SwordSentryJump=1  # Hover with sword
     kii:
-      Sword  # Pogo on the slime and slash to the left, Upslash to reach the branch
+      Sword  # Pogo on the slime and slash to the left
       Hammer  # weapon floats
-      Bash  # use slimes
-      MarshSpawn.CaveFight, Shuriken=1 OR Flash=1 OR Sentry=1
-      MarshSpawn.CaveFight, Glide, Spear=1
+      Bash  # use slime
+      # Glitched
+      # GlideJump
+      # GrenadeJump=1, Glide
+    unsafe:
+      Dash  # dash ramp at the first slime to skip the arena
+      GlideJump OR GrenadeJump OR AbilitySwap=1 OR SpearJump=1
+  # conn MarshSpawn.PoolsBurrowsSignpost:
+    # moki:
+      # DoubleJump, Dash OR Grapple
+      # Bash, DoubleJump OR Dash
+      # Bash, Grenade=1, Glide OR Grapple
+      # Launch
+      # MarshSpawn.CaveFight, DoubleJump OR Dash
+      # MarshSpawn.CaveFight, Bash, Grenade=1
+    # gorlek:
+      # DoubleJump
+      # Bash, Grenade=1
+      # MarshSpawn.CaveFight, SentryJump=1  # makes other sentryjump paths unnecessary
+      # weapon floats maybe too precise for gorlek
+    # kii:
+      # Sword  # Pogo on the slime and slash to the left, Upslash to reach the branch
+      # Hammer  # weapon floats
+      # Bash  # use slimes
+      # MarshSpawn.CaveFight, Shuriken=1 OR Flash=1 OR Sentry=1
+      # MarshSpawn.CaveFight, Glide, Spear=1
       # Gliched
       # GlideJump
       # GrenadeJump=2, Glide OR MarshSpawn.CaveFight
-    unsafe:
-      Dash  # dash ramp at the first slime to skip the arena
-      MarshSpawn.CaveFight, Spear=1  # not lenient enough for kii
-      GlideJump OR GrenadeJump OR FlashSwap
+    # unsafe:
+      # Dash  # dash ramp at the first slime to skip the arena
+      # MarshSpawn.CaveFight, Spear=1  # not lenient enough for kii
+      # GlideJump OR GrenadeJump OR FlashSwap
 
-# checkpoint at -845, -4438
+anchor MarshSpawn.CaveWaterfall at -845, -4438:  # At the first ledge next to the waterfall where you initally lose torch
+  refill Checkpoint
+
+  quest MarshSpawn.CaveKS: free
+
+  conn MarshSpawn.Cave: free  # Climb the moss and go around
+  conn MarshSpawn.PoolsBurrowsSignpost:
+    moki:
+      DoubleJump OR Dash OR Launch
+    gorlek:
+      Sword OR Hammer  # Upslash + hover
+      Bash, Grenade=1
+    kii:
+      Bash  # Use the slime
+      Shuriken=1 OR Flash=1 OR Sentry=1
+      Glide, Spear=1  # Spear alone is too precise for Kii
+      # Glitched
+      # GlideJump
+      # GrenadeJump=1
+    unsafe:
+      Spear=1 OR AbilitySwap=1 OR PauseFloat
+
+# checkpoint at -833, -4451
 
 anchor MarshSpawn.BurrowFightArena at -959, -4406:  # at the right side of the BurrowFightArena
   refill Health=1
