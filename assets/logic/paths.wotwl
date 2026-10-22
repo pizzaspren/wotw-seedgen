@@ -3991,6 +3991,8 @@ anchor EastHollow.AboveDepths at 47, -4302:  # To the right of the lever door bl
 
   conn UpperDepths.Entry:
     moki: Hollow.DepthsOpen
+  conn UpperDepths.FirstFirefly:  # Paths that cannot reach from UpperDepths.Entry
+    unsafe, Hollow.DepthsOpen: Unpopular, Bash # Fake bash the falling slug. https://youtu.be/0yagLd-HEJ8
   conn EastHollow.DepthsLeverDoor:
     moki, Hollow.BashTreeApproach.Lever: Combat=SneezeSlug OR Bash
     gorlek, Hollow.BashTreeApproach.Lever: Damage=5
@@ -11282,9 +11284,7 @@ anchor UpperDepths.Entry at 161, -4340:  # The little standable ground below the
       Damage=40, Dash OR Sword OR Shuriken=4
       Glide
       Damage=70, Sentry=4 OR Flash=4
-    unsafe:
-      Unpopular, Bash  # Fake bash the falling slug. https://youtu.be/0yagLd-HEJ8
-      Bash, DoubleJump OR Damage=10  # Same as above but either bash the slime or avoid it completely. https://youtu.be/kVYfydMo4js
+    unsafe: Bash, DoubleJump  # https://youtu.be/-u_HL3Od850
   conn EastHollow.AboveDepths:
     moki: Hollow.DepthsOpen, Glide
     gorlek, Hollow.DepthsOpen:
