@@ -494,7 +494,7 @@ anchor MarshSpawn.PoolsBurrowsSignpost at -898, -4435:  # the waypoint between p
       Dash  # Dash ramp
       # Wavedash, Combat=Bat
       Sword OR Shuriken=1 OR Flash=1 OR Sentry=1 OR BlazeSwap=1 OR FlashSwap
-      # Insert theorical stupid PauseFlaot from where the bat is
+      # Insert theorical stupid PauseFloat from where the bat is
   pickup Marsh.BellsApproach.LedgeSL:  # Make sure it's not redundant with MarshSpawn.PoolsBurrowsSignpost->MarshSpawn.BeforeBurrows->Marsh.BellsApproach.LedgeSL
     moki: Bash, DoubleJump
     gorlek: Bash, Dash OR Glide
@@ -11284,7 +11284,10 @@ anchor UpperDepths.Entry at 161, -4340:  # The little standable ground below the
       Damage=40, Dash OR Sword OR Shuriken=4
       Glide
       Damage=70, Sentry=4 OR Flash=4
-    unsafe: Bash, DoubleJump  # https://youtu.be/-u_HL3Od850
+    unsafe:  # The second BombSlug will explode on the spiky branch after ~35 seconds. The first bat will immediately die to spikes if you spawn in this anchor (no checkpoint).
+      Damage=40  # https://youtu.be/HNLFpZUOaVQ
+      PauseFloat
+      Bash, DoubleJump  # https://youtu.be/-u_HL3Od850
   conn EastHollow.AboveDepths:
     moki: Hollow.DepthsOpen, Glide
     gorlek, Hollow.DepthsOpen:
