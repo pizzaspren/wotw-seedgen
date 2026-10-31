@@ -11362,10 +11362,18 @@ anchor UpperDepths.FirstFirefly at 211, -4391:  # Where the Voice dialogue plays
     kii:
       Bash, Sword OR Hammer OR Shuriken=1
       Bash, Damage=30, Sentry=1 OR Flash=1
-      DoubleJump, TripleJump
+      DoubleJump, TripleJump OR Hammer OR GlideJump OR GrenadeJump=1
+      SwordSJump=1, Damage=30
+      GlideJump:
+        Sentry=1, Sentry=1 OR Damage=30
+        Flash=1, Flash=1 OR Damage=30
+        Hammer, Damage=30
     unsafe:
-      Bash
-      SentryJump=1, Combat=Bat, Glide, Damage=30
+      # Sword, DoubleJump  # Reset doublejumps with the bat. Too precise for kii
+      Glide, DoubleJump  # Use the updraft
+      # GlideJump, Sword, Damage=30  # GlideJump + upslash to reach the wall
+      Bash OR Sword OR GlideJump OR SentryJump=1 OR GroundedHammerJump OR AbilitySwap=2 OR GrenadeCancel  # Two safe spots in the overhead spikes to avoid damage
+      SpearJump=1, DoubleJump
   pickup Depths.BehindWind.CeilingOre:
     moki:
       Combat=Bat, Grapple, DoubleJump
