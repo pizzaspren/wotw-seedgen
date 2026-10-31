@@ -11382,11 +11382,21 @@ anchor UpperDepths.FirstFirefly at 211, -4391:  # Where the Voice dialogue plays
     gorlek:
       Grapple, DoubleJump
       Bash OR SentryJump=1
+    kii:
+      Grapple:  # Use the left plant to gain height
+        Sword OR Hammer  # Weapon takes care of combat. Hover to reach right plant
+        Combat=Bat, Dash OR Glide OR Shuriken=1 OR Blaze=1 OR Flash=1 OR Sentry=1
+      AerialHammerJump
+      GrenadeJump=1, DoubleJump OR Glide
+      SwordJump, DoubleJump, TripleJump
     unsafe:
-      DoubleJump, TripleJump
-      Hammer, DoubleJump
-      Grenade=1
-      DoubleJump, Shuriken, Sword, Deflector
+      DoubleJump:
+        Hammer OR Dash OR TripleJump OR SpearJump=1  # Wall at the grapple plant
+        Shuriken, Sword, Deflector
+      GlideJump OR GrenadeCancel OR AbilitySwap=1 OR GroundedHammerJump
+      Grapple  # Grapple both plants
+      # Grapple, UltraGrapple  # oriCool
+      # Grapple, Shuriken=1 OR Blaze=1 OR Flash=1 OR Sentry=1  # Too unreliable for kii with the plant physics
   pickup Depths.FirstKSRoom.LeftKS:  # paths breaking the firefly egg; others can go from the anchor below
     moki:
       BreakWall=1, Combat=Spiderling, Grapple, DoubleJump OR Dash OR Glide
